@@ -15,8 +15,7 @@ body{
     width: 1000px;
     height: 500px;
     display: flex;
-    flex-direction: row;
-    // background: #fff;
+    flex-direction: row-reverse;
     background:linear-gradient(to bottom right, hsl(0, 0%, 100%) 0%,  hsl(0, 70%, 89%) 100%);
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -25,11 +24,15 @@ body{
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-   
+    header{
+        padding: 30px 110px;
+        position:absolute;
+        margin-right: 630px;
+    }
 
     #content-div{
       width: 60%;
-      padding: 30px 110px;
+      padding: 70px 110px;
       
       h1{
           font-size: 45px;
@@ -55,14 +58,16 @@ body{
            display: flex;
            justify-content: space-between;
            input{
-               padding: 0 30px;
+               margin: 0 0 0 30px;
                width: 280px;
                border: none;
                outline: none;
                background-color: inherit;
+               z-index: 2;
                ::placeholder{
                    color: hsl(0, 36%, 70%);
                }
+              
            }
 
            button{
@@ -92,14 +97,69 @@ body{
     }
     #img-div{
         width: 40%;
-      img{
+      #img{
+          display: initial;
           width: 100%;
           height: 500px; 
       }
+
+      #img-alt{
+          display: none;
+      }
     }
 }
-
 footer{
     margin-top: 50px;
     text-align: center;
+}
+
+@media(max-width: 600px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        min-width: 350px;
+        height: auto;
+        padding-bottom: 70px;
+
+        header{
+            position: relative;
+            order: 1;
+            padding: 20px 20px 30px 20px;
+        }
+
+        #img-div{
+            order:2;
+            width: 100%;
+
+            #img{
+                display: none;
+            }
+
+            #img-alt{
+                display: initial;
+                width: 100%;
+            }
+        }
+
+        #content-div{
+            order: 2;
+            padding: 40px;
+            width: 100%;
+            
+            #content{
+                text-align: center;
+                #email-div{
+                    height: 50px;
+                    input{
+                        width: 200px;
+                    }
+                    button{
+                        height: 49px;
+                    }
+                }
+            }
+        }
+    }
 }

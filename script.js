@@ -24,3 +24,18 @@ function validate(){
 }
 
 $("#submit-btn").on("click", validate);
+
+
+// window.addEventListener("resize", ()=>{
+//     var image1 = document.getElementById("img").src ="./images/hero-desktop.jpg";
+//     var image2 = document.getElementById("img").src ="./images/hero-mobile.jpg";
+//     var x = window.matchMedia("(max-width: 600px)")
+//     if(x.matches){
+//          image1;
+//     }
+//     else {
+//         image2
+//     };
+// });
+
+
