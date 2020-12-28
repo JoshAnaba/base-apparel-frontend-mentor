@@ -33,6 +33,10 @@ body {
   margin-right: 630px;
 }
 
+.container #error {
+  color: red;
+}
+
 .container #content-div {
   width: 60%;
   padding: 70px 110px;
@@ -67,11 +71,18 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container #content-div #email-div #error-svg {
+  display: none;
 }
 
 .container #content-div #email-div input {
   margin: 0 0 0 30px;
-  width: 280px;
+  width: 250px;
   border: none;
   outline: none;
   background-color: inherit;
@@ -96,7 +107,7 @@ body {
 
 .container #content-div #email-div button {
   width: 80px;
-  height: 39px;
+  height: 40px;
   border-radius: 30px;
   position: relative;
   left: 2px;
