@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Josefin Sans', sans-serif;
+    margin-top: 80px;
+    background-color: #EEF2F7;
+}
+
+.container{
+    margin: auto;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    // background: #fff;
+    background:linear-gradient(to bottom right, hsl(0, 0%, 100%) 0%,  hsl(0, 70%, 89%) 100%);
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+   
+
+    #content-div{
+      width: 60%;
+      padding: 30px 110px;
+      
+      h1{
+          font-size: 45px;
+          margin-top: 40px;
+          letter-spacing: 12px;
+          line-height: 50px;
+          span{
+              color: hsl(0, 36%, 70%);
+              font-weight: 300;
+          }
+      }
+      p{
+          line-height: 25px;
+          margin-top: -15px;
+          font-size: 15px;
+          color: hsl(0, 36%, 70%)
+      }
+
+      #email-div{
+           height:40px;
+           border-radius: 30px;
+           border: 2px solid hsl(0, 36%, 70%);
+           display: flex;
+           justify-content: space-between;
+           input{
+               padding: 0 30px;
+               width: 280px;
+               border: none;
+               outline: none;
+               background-color: inherit;
+               ::placeholder{
+                   color: hsl(0, 36%, 70%);
+               }
+           }
+
+           button{
+               width: 80px;
+               height: 39px;
+               border-radius: 30px;
+               position: relative;
+               left: 2px;
+               bottom: 1px;
+               outline: none;
+               cursor: pointer;
+               border: 1px solid  hsl(0, 93%, 68%);
+               background-color: hsl(0, 93%, 68%);
+               box-shadow:
+               0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+               0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+               0 12.5px 10px rgba(0, 0, 0, 0.06),
+               0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+               0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+               0 100px 80px rgba(0, 0, 0, 0.12);
+              
+           }
+           button:hover{
+            background:hsl(0, 80%, 75%)
+        }
+        }
+    }
+    #img-div{
+        width: 40%;
+      img{
+          width: 100%;
+          height: 500px; 
+      }
+    }
+}
+
+footer{
+    margin-top: 50px;
+    text-align: center;
+}
