@@ -7,9 +7,10 @@
   function validate(){
          const error = $('#error')
          const email = $("#email").val();
-         const err =  document.getElementById('error-svg');
+         const err =  $('#error-svg');
       if(document.emailForm.email.value == ''){
            error.text('field cannot be empty!');
+           err.css('display', 'block');
            document.emailForm.email.focus();
            return false;
        }
@@ -17,14 +18,12 @@
       else  if (!validateEmail(email)){
          error.css('color', 'red').text(email + " is not a valid email address ");
          document.emailForm.email.focus();
-         
-        
-             err.style.display = 'block';
+         err.css('display', 'block');
           
           return false;
        }
       else {
-         err.style.display = 'none';
+         err.css('display', 'none');
          error.css('color', 'green').text(email + " is valid ");
           setTimeout(()=>{
             alert(`${email} has been added,check your email for more information`)
